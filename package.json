@@ -1,0 +1,12 @@
+{
+  "name": "ipl-franchise-explorer",
+  "version": "1.0.0",
+  "description": "An enterprise-grade IPL Franchise Exploration Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
