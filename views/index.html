@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Franchise Console | Enterprise Analytics</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="brand">
+                <span class="logo-icon">🏏</span>
+                <h1>IPL Franchise Explorer</h1>
+                <span class="badge">Enterprise Console</span>
+            </div>
+            <div class="user-profile">System Administrator</div>
+        </header>
+
+        <div class="main-layout">
+            <nav class="sidebar" id="team-sidebar">
+                <div class="sidebar-header">Franchise Directory</div>
+                <ul class="team-list" id="team-list-container">
+                    </ul>
+            </nav>
+
+            <main class="content-workspace" id="main-workspace">
+                <div class="empty-state" id="empty-state">
+                    <h3>Select an IPL Franchise from the directory to begin deep-dive exploration.</h3>
+                </div>
+                
+                <div class="dashboard-core" id="dashboard-content" style="display: none;">
+                    <div class="hero-banner" id="hero-banner">
+                        <div class="hero-identity">
+                            <img id="team-logo" src="" alt="Team Logo">
+                            <div>
+                                <h2 id="team-title">Team Name</h2>
+                                <p id="team-meta">Est. 2008 | Home Stadium</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-bar">
+                        <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+                        <button class="tab-btn" onclick="switchTab('squad')">Squad & Roster</button>
+                        <button class="tab-btn" onclick="switchTab('financials')">Financial Metrics</button>
+                    </div>
+
+                    <div class="tab-content active" id="tab-overview">
+                        <div class="grid-layout">
+                            <div class="card-widget">
+                                <h3>Ownership Structure</h3>
+                                <p id="info-owners" class="highlight-text">-</p>
+                            </div>
+                            <div class="card-widget">
+                                <h3>Championship Trophies</h3>
+                                <div id="info-trophies" class="trophy-rack"></div>
+                            </div>
+                            <div class="card-widget full-width">
+                                <h3>Executive Leadership</h3>
+                                <table class="enterprise-table">
+                                    <thead>
+                                        <tr><th>Role</th><th>Name</th></tr>
+                                    </thead>
+                                    <tbody id="table-leadership"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-squad">
+                        <div class="card-widget full-width">
+                            <h3>Active Roster Grid</h3>
+                            <table class="enterprise-table">
+                                <thead>
+                                    <tr>
+                                        <th>Player Name</th>
+                                        <th>Core Role</th>
+                                        <th>Nationality</th>
+                                        <th>Performance Metrics</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-roster"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tab-financials">
+                        <div class="grid-layout">
+                            <div class="card-widget valuation-card">
+                                <h3>Estimated Valuation</h3>
+                                <div class="metric-value" id="metric-val">-</div>
+                            </div>
+                            <div class="card-widget revenue-card">
+                                <h3>Annual Franchise Revenue</h3>
+                                <div class="metric-value" id="metric-rev">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
