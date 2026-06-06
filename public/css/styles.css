@@ -1,0 +1,54 @@
+:root {
+    --bg-main: #f3f4f6;
+    --bg-card: #ffffff;
+    --text-dark: #1f2937;
+    --border-color: #e5e7eb;
+    --app-blue: #0176d3; /* Salesforce standard branding color */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body { background-color: var(--bg-main); color: var(--text-dark); height: 100vh; overflow: hidden; }
+
+.app-container { display: flex; flex-direction: column; height: 100vh; }
+
+.app-header { background: #1b2738; color: white; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.badge { background: var(--app-blue); font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+
+.main-layout { display: flex; flex: 1; overflow: hidden; }
+
+.sidebar { width: 300px; background: white; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
+.sidebar-header { padding: 16px; font-weight: bold; font-size: 14px; text-transform: uppercase; tracking: 1px; border-bottom: 1px solid var(--border-color); }
+.team-list { list-style: none; overflow-y: auto; }
+.team-item { padding: 14px 20px; cursor: pointer; display: flex; align-items: center; gap: 12px; transition: background 0.2s; border-bottom: 1px solid #f9fafb;}
+.team-item:hover { background: #f4f6f9; }
+.team-item.active { background: #e8f0fe; border-left: 4px solid var(--app-blue); }
+
+.content-workspace { flex: 1; padding: 24px; overflow-y: auto; display: flex; flex-direction: column; }
+.empty-state { display: flex; align-items: center; justify-content: center; flex: 1; color: #6b7280; text-align: center; }
+
+.hero-banner { color: white; padding: 32px; border-radius: 8px; margin-bottom: 20px; background: linear-gradient(135deg, #1e293b, #0f172a); }
+.hero-identity { display: flex; align-items: center; gap: 20px; }
+.hero-identity img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid white; object-fit: cover;}
+
+.tab-bar { display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; gap: 8px;}
+.tab-btn { background: none; border: none; padding: 12px 24px; cursor: pointer; font-size: 14px; font-weight: 600; color: #4b5563; border-bottom: 3px solid transparent; }
+.tab-btn.active { color: var(--app-blue); border-bottom-color: var(--app-blue); }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.grid-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.full-width { grid-column: span 2; }
+
+.card-widget { background: white; border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.card-widget h3 { margin-bottom: 16px; font-size: 15px; color: #4b5563; border-bottom: 1px solid #f3f4f6; padding-bottom: 8px;}
+
+.enterprise-table { width: 100%; border-collapse: collapse; text-align: left; }
+.enterprise-table th { padding: 12px; background: #f9fafb; font-size: 12px; text-transform: uppercase; color: #6b7280; }
+.enterprise-table td { padding: 14px 12px; border-bottom: 1px solid var(--border-color); font-size: 14px; }
+
+.metric-value { font-size: 32px; font-weight: bold; color: #0f172a; margin-top: 10px; }
+.trophy-rack { display: flex; gap: 8px; flex-wrap: wrap; }
+.trophy-tag { background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; border: 1px solid #fde68a;}
